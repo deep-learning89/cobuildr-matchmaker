@@ -226,21 +226,6 @@ export function MynaHero() {
               ))}
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={controls}
-              variants={{
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: { delay: 1, duration: 0.4 },
-                },
-              }}
-            >
-              <Button variant="glow" size="lg" className="text-base px-10" onClick={() => setDialogOpen(true)}>
-                GET STARTED <ArrowRight className="h-4 w-4 ml-1" />
-              </Button>
-            </motion.div>
           </div>
         </div>
       </section>
