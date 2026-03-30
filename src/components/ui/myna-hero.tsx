@@ -157,13 +157,13 @@ export function MynaHero() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={ref} className="relative pt-32 pb-20 md:pt-44 md:pb-28 px-4">
+      <section ref={ref} className="relative pt-28 pb-16 md:pt-36 md:pb-20 px-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto max-w-5xl">
           <div className="text-center">
             <motion.h1
-              className="font-display text-4xl sm:text-6xl md:text-8xl font-bold tracking-tight leading-[1.05] mb-8 flex flex-wrap justify-center gap-x-4 gap-y-1"
+              className="font-display text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] mb-6 flex flex-wrap justify-center gap-x-3 gap-y-1"
             >
               {titleWords.map((text, index) => (
                 <motion.span
