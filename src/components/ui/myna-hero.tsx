@@ -200,11 +200,9 @@ export function MynaHero() {
                   transition: { delay: 0.6, duration: 0.5 },
                 },
               }}
-              className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-10"
+              className="text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6"
             >
-              Stop searching through LinkedIn. Cobuildr matches SaaS founders
-              with complementary skills, aligned vision, and the same drive to
-              ship.
+              Find co-founders and teammates who match your vision and collaborate with developers, designers, and marketers who are serious about building SaaS products that actually ship.
             </motion.p>
 
             <motion.div
