@@ -44,7 +44,7 @@ const Index = () => {
       <MynaHero />
 
       {/* Toolbar */}
-      <section className="relative -mt-12 z-10 px-4">
+      <section className="relative -mt-16 z-10 px-4">
         <div className="container mx-auto max-w-2xl flex items-center justify-between rounded-2xl border border-border bg-card/80 backdrop-blur-xl shadow-lg px-6 py-4">
           <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
             Ready to find your match?
@@ -56,14 +56,14 @@ const Index = () => {
       </section>
 
       {/* Filter Section */}
-      <section className="relative py-20 md:py-28 px-4 bg-background">
-        <div className="container mx-auto text-center mb-10">
+      <section className="relative py-10 md:py-14 px-4 bg-background">
+        <div className="container mx-auto text-center mb-8">
           <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
             Tell us about yourself
           </p>
         </div>
         <FilterBar />
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8">
           <Button variant="glow" size="lg" className="text-base px-10 glow-border" onClick={() => setDialogOpen(true)}>
             Join Waitlist
             <ArrowRight className="h-4 w-4 ml-1" />
@@ -73,6 +73,20 @@ const Index = () => {
 
       {/* User Cards Section */}
       <UserCards />
+
+      {/* About Section */}
+      <section className="relative py-14 md:py-20 px-4 bg-background">
+        <div className="container mx-auto max-w-3xl">
+          <div className="rounded-2xl border border-border bg-card p-8 md:p-12">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+              Why Cobuildr?
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Building a SaaS product alone is hard. You have the idea but you are missing the developer to build it, the designer to shape it, or the marketer to grow it. This platform is where serious founders, developers, and marketers find each other — not randomly, but based on how you work, what you are building, and where you are in your journey. Before you fully commit to a co-founder or teammate, you get 24 hours to collaborate with them, review how they think, and decide if they are the right fit. No guessing, no wasted time. Just real builders finding the right people to build with.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4 bg-background">
