@@ -1,10 +1,29 @@
 import { MynaHero, features } from "@/components/ui/myna-hero";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import FilterBar from "@/components/FilterBar";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Index = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email.trim()) {
+      setSubmitted(true);
+      setTimeout(() => {
+        setDialogOpen(false);
+        setSubmitted(false);
+        setEmail("");
+      }, 2000);
+    }
+  };
+
   return (
     <>
       <MynaHero />
@@ -15,7 +34,7 @@ const Index = () => {
           <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
             Ready to find your match?
           </p>
-          <Button variant="glow" size="sm">
+          <Button variant="glow" size="sm" onClick={() => setDialogOpen(true)}>
             Get Started <ArrowRight className="h-3.5 w-3.5 ml-1" />
           </Button>
         </div>
@@ -30,7 +49,7 @@ const Index = () => {
         </div>
         <FilterBar />
         <div className="flex justify-center mt-10">
-          <Button variant="glow" size="lg" className="text-base px-10 glow-border">
+          <Button variant="glow" size="lg" className="text-base px-10 glow-border" onClick={() => setDialogOpen(true)}>
             Join Waitlist
             <ArrowRight className="h-4 w-4 ml-1" />
           </Button>
@@ -56,7 +75,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center rounded-lg bg-primary/10 p-2.5 mb-4">
                   <feature.icon className="h-5 w-5 text-primary" />
                 </div>
-                <h3 className="font-display font-semibold text-lg mb-2">
+                <h3 className="font-display font-semibold text-lg mb-2 text-foreground">
                   {feature.label}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -75,6 +94,39 @@ const Index = () => {
           <span>© 2026 Cobuildr. All rights reserved.</span>
         </div>
       </footer>
+
+      {/* Waitlist Dialog */}
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="sm:max-w-md bg-card border-border">
+          <DialogHeader>
+            <DialogTitle className="font-display text-xl text-foreground">Join the Waitlist</DialogTitle>
+            <DialogDescription className="text-foreground/60">
+              Be the first to find your perfect co-founder. Enter your email below.
+            </DialogDescription>
+          </DialogHeader>
+          {submitted ? (
+            <div className="py-6 text-center">
+              <Rocket className="h-8 w-8 text-primary mx-auto mb-3" />
+              <p className="text-foreground font-medium">You're on the list! 🚀</p>
+              <p className="text-sm text-foreground/60 mt-1">We'll be in touch soon.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-2">
+              <Input
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="bg-background border-border text-foreground"
+              />
+              <Button type="submit" variant="glow" className="w-full">
+                Join Waitlist <ArrowRight className="h-4 w-4 ml-1" />
+              </Button>
+            </form>
+          )}
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
