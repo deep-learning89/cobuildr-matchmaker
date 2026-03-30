@@ -79,7 +79,7 @@ const Index = () => {
         <div className="container mx-auto max-w-3xl">
           <div className="rounded-2xl border border-border bg-card p-8 md:p-12">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
-              Why Cobuildr?
+              Who is this for?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Building a SaaS product alone is hard. You have the idea but you are missing the developer to build it, the designer to shape it, or the marketer to grow it. This platform is where serious founders, developers, and marketers find each other — not randomly, but based on how you work, what you are building, and where you are in your journey. Before you fully commit to a co-founder or teammate, you get 24 hours to collaborate with them, review how they think, and decide if they are the right fit. No guessing, no wasted time. Just real builders finding the right people to build with.
