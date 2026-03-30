@@ -159,7 +159,7 @@ export function MynaHero() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={ref} className="relative pt-24 pb-8 md:pt-28 md:pb-12 px-4">
+      <section ref={ref} className="relative pt-20 pb-4 md:pt-24 md:pb-8 px-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto max-w-5xl">
