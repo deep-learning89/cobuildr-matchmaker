@@ -1,10 +1,10 @@
-import { MynaHero, features } from "@/components/ui/myna-hero";
+import { MynaHero } from "@/components/ui/myna-hero";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import FilterBar from "@/components/FilterBar";
+import UserCards from "@/components/UserCards";
 import { ArrowRight, Rocket } from "lucide-react";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Index = () => {
