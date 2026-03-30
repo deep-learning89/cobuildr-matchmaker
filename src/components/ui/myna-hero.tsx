@@ -159,13 +159,13 @@ export function MynaHero() {
       </nav>
 
       {/* Hero Section */}
-      <section ref={ref} className="relative pt-24 pb-8 md:pt-28 md:pb-12 px-4">
+      <section ref={ref} className="relative pt-20 pb-4 md:pt-24 md:pb-8 px-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container mx-auto max-w-5xl">
           <div className="text-center">
             <motion.h1
-              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-4 flex flex-wrap justify-center gap-x-2 gap-y-1"
+              className="font-display text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-4 flex flex-wrap justify-center gap-x-3 gap-y-1"
             >
               {titleWords.map((text, index) => (
                 <motion.span
@@ -198,7 +198,7 @@ export function MynaHero() {
                   transition: { delay: 0.6, duration: 0.5 },
                 },
               }}
-              className="text-sm md:text-base text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6"
+              className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6"
             >
               Find co-founders and teammates who match your vision and collaborate with developers, designers, and marketers who are serious about building SaaS products that actually ship.
             </motion.p>

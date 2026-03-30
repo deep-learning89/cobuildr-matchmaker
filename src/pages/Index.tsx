@@ -44,7 +44,7 @@ const Index = () => {
       <MynaHero />
 
       {/* Toolbar */}
-      <section className="relative -mt-8 z-10 px-4">
+      <section className="relative -mt-12 z-10 px-4">
         <div className="container mx-auto max-w-2xl flex items-center justify-between rounded-2xl border border-border bg-card/80 backdrop-blur-xl shadow-lg px-6 py-4">
           <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
             Ready to find your match?
