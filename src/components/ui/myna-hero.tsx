@@ -165,7 +165,7 @@ export function MynaHero() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center">
             <motion.h1
-              className="font-display text-3xl sm:text-4xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-4 flex flex-wrap justify-center gap-x-2 gap-y-1"
+              className="font-display text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-4 flex flex-wrap justify-center gap-x-3 gap-y-1"
             >
               {titleWords.map((text, index) => (
                 <motion.span
