@@ -180,7 +180,7 @@ export function MynaHero() {
                     },
                   }}
                    className={
-                    text === "PEOPLE" ? "text-gradient" : "text-foreground"
+                    text === "CO-FOUNDER" ? "text-gradient" : "text-foreground"
                   }
                 >
                   {text}
