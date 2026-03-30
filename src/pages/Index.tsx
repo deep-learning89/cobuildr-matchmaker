@@ -70,36 +70,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="relative py-24 px-4 bg-background">
-        <div className="container mx-auto max-w-5xl">
-          <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium text-center mb-10">
-            Unlock the Power of Smart Matching
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15, duration: 0.5 }}
-                className="filter-card rounded-xl p-6 hover:border-primary/20 transition-colors"
-              >
-                <div className="inline-flex items-center justify-center rounded-lg bg-primary/10 p-2.5 mb-4">
-                  <feature.icon className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-display font-semibold text-lg mb-2 text-foreground">
-                  {feature.label}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* User Cards Section */}
+      <UserCards />
 
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4 bg-background">
