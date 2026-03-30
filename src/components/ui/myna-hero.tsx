@@ -181,8 +181,8 @@ export function MynaHero() {
                       transition: { delay: index * 0.08, duration: 0.5 },
                     },
                   }}
-                  className={
-                    text === "CO-FOUNDER" ? "text-gradient" : "text-foreground"
+                   className={
+                    text === "PEOPLE" ? "text-gradient" : "text-foreground"
                   }
                 >
                   {text}
