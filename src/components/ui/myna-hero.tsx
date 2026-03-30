@@ -91,13 +91,17 @@ export function MynaHero() {
   };
 
   const titleWords = [
+    "GREAT",
+    "SAAS",
+    "PRODUCTS",
+    "AREN'T",
+    "BUILT",
+    "ALONE",
+    "—",
     "FIND",
     "YOUR",
-    "PERFECT",
-    "CO-FOUNDER",
-    "TO",
-    "BUILD",
-    "WITH",
+    "PEOPLE",
+    "HERE",
   ];
 
   return (
