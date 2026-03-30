@@ -45,7 +45,7 @@ const Index = () => {
 
       {/* Toolbar */}
       <section className="relative py-6 px-4 bg-card border-y border-border">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto max-w-3xl flex items-center justify-between">
           <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
             Ready to find your match?
           </p>
