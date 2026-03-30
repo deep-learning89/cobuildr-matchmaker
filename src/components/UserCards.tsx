@@ -70,7 +70,7 @@ const allUsers = [...mockUsers, ...mockUsers];
 
 export default function UserCards() {
   return (
-    <section className="relative py-24 px-4 bg-background overflow-hidden">
+    <section className="relative py-10 md:py-14 px-4 bg-background overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium text-center mb-4">
           Founders Already Waiting
