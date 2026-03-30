@@ -12,15 +12,29 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email.trim()) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setDialogOpen(false);
-        setSubmitted(false);
-        setEmail("");
-      }, 2000);
+      try {
+        await fetch("https://formspree.io/f/mvzvadez", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+        setSubmitted(true);
+        setTimeout(() => {
+          setDialogOpen(false);
+          setSubmitted(false);
+          setEmail("");
+        }, 2000);
+      } catch {
+        setSubmitted(true);
+        setTimeout(() => {
+          setDialogOpen(false);
+          setSubmitted(false);
+          setEmail("");
+        }, 2000);
+      }
     }
   };
 
