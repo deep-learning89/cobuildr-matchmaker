@@ -91,17 +91,15 @@ export function MynaHero() {
   };
 
   const titleWords = [
-    "GREAT",
-    "SAAS",
-    "PRODUCTS",
-    "AREN'T",
-    "BUILT",
-    "ALONE",
-    "—",
+    "STOP",
+    "SOLO",
+    "GRINDING,",
     "FIND",
     "YOUR",
-    "PEOPLE",
-    "HERE",
+    "CO-FOUNDER",
+    "AND",
+    "BUILD",
+    "FASTER",
   ];
 
   return (
@@ -182,7 +180,7 @@ export function MynaHero() {
                     },
                   }}
                    className={
-                    text === "PEOPLE" ? "text-gradient" : "text-foreground"
+                    text === "CO-FOUNDER" ? "text-gradient" : "text-foreground"
                   }
                 >
                   {text}
