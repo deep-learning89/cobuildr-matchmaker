@@ -103,60 +103,7 @@ export function MynaHero() {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="flex items-center gap-2">
-            <Rocket className="h-5 w-5 text-primary" />
-            <span className="text-lg font-display font-bold tracking-tight text-foreground">
-              Cobuildr
-            </span>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8 text-xs tracking-widest text-muted-foreground">
-            {navigationItems.map((item) => (
-              <a
-                key={item.title}
-                href={item.href}
-                className="hover:text-foreground transition-colors"
-              >
-                {item.title}
-              </a>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Button variant="glow" size="sm" className="hidden sm:inline-flex" onClick={() => setDialogOpen(true)}>
-              GET STARTED <ArrowRight className="h-3.5 w-3.5 ml-1" />
-            </Button>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
-                  <Menu className="h-5 w-5" />
-                  <span className="sr-only">Toggle menu</span>
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <div className="flex flex-col gap-6 mt-8">
-                  {navigationItems.map((item) => (
-                    <a
-                      key={item.title}
-                      href={item.href}
-                      className="text-sm tracking-widest text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {item.title}
-                    </a>
-                  ))}
-                  <Button variant="glow" size="sm" onClick={() => setDialogOpen(true)}>
-                    GET STARTED <ArrowRight className="h-3.5 w-3.5 ml-1" />
-                  </Button>
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        </div>
-      </nav>
+    <div className="bg-background text-foreground overflow-hidden">
 
       {/* Hero Section */}
       <section ref={ref} className="relative pt-20 pb-4 md:pt-24 md:pb-8 px-4">
