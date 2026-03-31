@@ -51,7 +51,7 @@ const Navbar = () => {
         </Button>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="md:hidden">
+            <Button variant="ghost" size="icon" className="flex md:hidden">
               <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
