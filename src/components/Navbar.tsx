@@ -41,6 +41,7 @@ const Navbar = () => {
           <span className="text-lg font-display font-bold tracking-tight">Cobuildr</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <NavLink to="/">Home</NavLink>
           <NavLink to="/how-it-works" className="hover:text-foreground transition-colors">How it works</NavLink>
           <NavLink to="/explore" className="hover:text-foreground transition-colors">Explore Builders</NavLink>
           <NavLink to="#" className="hover:text-foreground transition-colors">Pricing</NavLink>
