@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -5,6 +6,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, Rocket } from "lucide-react";
 
 const filters = [
   {
@@ -35,10 +39,33 @@ const filters = [
 ];
 
 const FilterBar = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email.trim()) {
+      try {
+        await fetch("https://formspree.io/f/mvzvadez", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+      } catch {
+        // still show success
+      }
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setEmail("");
+      }, 3000);
+    }
+  };
+
   return (
     <div className="w-full max-w-5xl mx-auto">
       <div className="filter-card rounded-2xl p-6 md:p-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
           {filters.map((filter) => (
             <div key={filter.label} className="space-y-2">
               <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
@@ -59,6 +86,28 @@ const FilterBar = () => {
             </div>
           ))}
         </div>
+
+        {/* Email form with Formspree */}
+        {submitted ? (
+          <div className="flex items-center justify-center gap-2 py-3">
+            <Rocket className="h-5 w-5 text-primary" />
+            <p className="text-foreground font-medium text-sm">You're on the list! 🚀</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 items-center max-w-lg mx-auto">
+            <Input
+              type="email"
+              placeholder="you@example.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="bg-background border-border text-foreground"
+            />
+            <Button type="submit" variant="glow" size="sm" className="whitespace-nowrap">
+              Join Waitlist <ArrowRight className="h-3.5 w-3.5 ml-1" />
+            </Button>
+          </form>
+        )}
       </div>
     </div>
   );
