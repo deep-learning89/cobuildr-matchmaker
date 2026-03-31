@@ -7,6 +7,10 @@ import FilterBar from "@/components/FilterBar";
 import UserCards from "@/components/UserCards";
 import { ArrowRight, Rocket } from "lucide-react";
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
+
+// inside return, add as first line:
+<Navbar />
 
 const Index = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
