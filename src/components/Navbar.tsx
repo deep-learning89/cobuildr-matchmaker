@@ -10,8 +10,8 @@ const Navbar = () => {
           <span className="text-lg font-display font-bold tracking-tight">Cobuildr</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#" className="hover:text-foreground transition-colors">How it works</a>
-          <a href="#" className="hover:text-foreground transition-colors">For Founders</a>
+          <a href="/how-it-works" className="hover:text-foreground transition-colors">How it works</a>
+          <a href="/explore" className="hover:text-foreground transition-colors">Explore Builders</a>
           <a href="#" className="hover:text-foreground transition-colors">Pricing</a>
         </div>
         <Button variant="glow" size="sm">
