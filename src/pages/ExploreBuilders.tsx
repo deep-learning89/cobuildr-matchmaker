@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 const builders = [
   {
     name: "Sarah Chen",
+    username: "sarah-chen",
     photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
     bio: "Building an AI scheduling tool for remote teams. Looking for a technical co-founder who loves clean code.",
     skills: ["UI/UX", "Figma", "User Research"],
