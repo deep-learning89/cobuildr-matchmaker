@@ -80,18 +80,6 @@ export const HowItWorks: React.FC<HowItWorksProps> = ({ className, ...props }) =
           </p>
         </div>
 
-        <div className="relative mb-10">
-          <div className="absolute left-0 right-0 top-1/2 hidden h-px -translate-y-1/2 bg-border md:block" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {stepsData.map((_, index) => (
-              <div key={index} className="flex justify-center">
-                <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background font-display text-sm font-bold text-primary">
-                  {index + 1}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {stepsData.map((step, index) => (
