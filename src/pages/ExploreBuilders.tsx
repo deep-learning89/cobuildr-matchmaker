@@ -34,6 +34,7 @@ const builders = [
   },
   {
     name: "Marcus Liu",
+    username: "marcus-liu",
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
     bio: "Backend engineer building scalable APIs. Looking for a product-minded co-founder.",
     skills: ["Go", "AWS", "Kubernetes"],
