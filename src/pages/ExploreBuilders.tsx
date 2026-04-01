@@ -42,6 +42,7 @@ const builders = [
   },
   {
     name: "Elena Vasquez",
+    username: "elena-vasquez",
     photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
     bio: "Serial entrepreneur in fintech. Looking for a CTO to build the next big payment platform.",
     skills: ["Fundraising", "Strategy", "Sales"],
