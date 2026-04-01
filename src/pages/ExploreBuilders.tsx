@@ -5,10 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const builders = [
   {
     name: "Sarah Chen",
+    username: "sarah-chen",
     photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
     bio: "Building an AI scheduling tool for remote teams. Looking for a technical co-founder who loves clean code.",
     skills: ["UI/UX", "Figma", "User Research"],
@@ -16,6 +18,7 @@ const builders = [
   },
   {
     name: "James Okafor",
+    username: "james-okafor",
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
     bio: "Full-stack dev passionate about AI-driven SaaS. Looking for a business co-founder to handle growth.",
     skills: ["React", "Node.js", "Python"],
@@ -23,6 +26,7 @@ const builders = [
   },
   {
     name: "Priya Sharma",
+    username: "priya-sharma",
     photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
     bio: "Scaling B2B SaaS from 0 to 10k users. Need a developer to build the MVP with me.",
     skills: ["SEO", "Content Strategy", "Analytics"],
@@ -30,6 +34,7 @@ const builders = [
   },
   {
     name: "Marcus Liu",
+    username: "marcus-liu",
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
     bio: "Backend engineer building scalable APIs. Looking for a product-minded co-founder.",
     skills: ["Go", "AWS", "Kubernetes"],
@@ -37,6 +42,7 @@ const builders = [
   },
   {
     name: "Elena Vasquez",
+    username: "elena-vasquez",
     photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
     bio: "Serial entrepreneur in fintech. Looking for a CTO to build the next big payment platform.",
     skills: ["Fundraising", "Strategy", "Sales"],
@@ -44,6 +50,7 @@ const builders = [
   },
   {
     name: "Aiko Tanaka",
+    username: "aiko-tanaka",
     photo: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=face",
     bio: "Product designer crafting beautiful SaaS dashboards. Looking for a dev partner to ship faster.",
     skills: ["Design Systems", "Figma", "No Code"],
@@ -135,9 +142,11 @@ const ExploreBuilders = () => {
                     </Badge>
                   ))}
                 </div>
-                <Button variant="outline-glow" size="sm" className="w-full">
-                  Visit Profile
-                </Button>
+                <Link to={`/profile/${builder.username}`}>
+                  <Button variant="outline-glow" size="sm" className="w-full">
+                    Visit Profile
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
