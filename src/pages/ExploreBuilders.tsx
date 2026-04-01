@@ -142,9 +142,11 @@ const ExploreBuilders = () => {
                     </Badge>
                   ))}
                 </div>
-                <Button variant="outline-glow" size="sm" className="w-full">
-                  Visit Profile
-                </Button>
+                <Link to={`/profile/${builder.username}`}>
+                  <Button variant="outline-glow" size="sm" className="w-full">
+                    Visit Profile
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
