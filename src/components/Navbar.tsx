@@ -57,6 +57,7 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="flex flex-col gap-6 mt-8">
+              <NavLink to="/">Home</NavLink>
               <NavLink to="/how-it-works">How it works</NavLink>
               <NavLink to="/explore">Explore Builders</NavLink>
               <NavLink to="#">Pricing</NavLink>
