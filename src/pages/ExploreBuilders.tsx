@@ -26,6 +26,7 @@ const builders = [
   },
   {
     name: "Priya Sharma",
+    username: "priya-sharma",
     photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face",
     bio: "Scaling B2B SaaS from 0 to 10k users. Need a developer to build the MVP with me.",
     skills: ["SEO", "Content Strategy", "Analytics"],
