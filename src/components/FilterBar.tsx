@@ -63,38 +63,15 @@ const FilterBar = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
+    <div className="w-full max-w-lg mx-auto">
       <div className="filter-card rounded-2xl p-6 md:p-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6">
-          {filters.map((filter) => (
-            <div key={filter.label} className="space-y-2">
-              <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                {filter.label}
-              </label>
-              <Select>
-                <SelectTrigger className="bg-secondary border-border hover:border-primary/30 transition-colors">
-                  <SelectValue placeholder={filter.placeholder} />
-                </SelectTrigger>
-                <SelectContent>
-                  {filter.options.map((option) => (
-                    <SelectItem key={option} value={option.toLowerCase().replace(/\s+/g, "-")}>
-                      {option}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
-          ))}
-        </div>
-
-        {/* Email form with Formspree */}
         {submitted ? (
           <div className="flex items-center justify-center gap-2 py-3">
             <Rocket className="h-5 w-5 text-primary" />
             <p className="text-foreground font-medium text-sm">You're on the list! 🚀</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 items-center max-w-lg mx-auto">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 items-center">
             <Input
               type="email"
               placeholder="you@example.com"
@@ -108,6 +85,10 @@ const FilterBar = () => {
             </Button>
           </form>
         )}
+        <div className="text-center mt-4 space-y-1">
+          <p className="text-xs text-muted-foreground">Join 50+ founders already on the waitlist</p>
+          <p className="text-xs text-muted-foreground">Early members get priority matching at launch.</p>
+        </div>
       </div>
     </div>
   );
