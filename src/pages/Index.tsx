@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import UserCards from "@/components/UserCards";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
-import { ArrowRight, Rocket, CheckCircle, Star, Users, Clock } from "lucide-react";
+import { ArrowRight, Rocket, CheckCircle, Star, Users, Clock, Target, Search, Zap } from "lucide-react";
 
 const InlineWaitlistForm = () => {
   const [email, setEmail] = useState("");
