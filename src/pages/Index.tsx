@@ -213,11 +213,6 @@ const Index = () => {
 
       {/* Filter Section */}
       <section className="relative py-10 md:py-14 px-4 bg-background">
-        <div className="container mx-auto text-center mb-8">
-          <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
-            Tell us about yourself
-          </p>
-        </div>
         <FilterBar />
 
 
