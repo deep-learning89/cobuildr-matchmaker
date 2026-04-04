@@ -144,7 +144,7 @@ export function MynaHero() {
               }}
               className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed mb-6"
             >
-              Find co-founders and teammates who match your vision and collaborate with developers, designers, and marketers who are serious about building SaaS products that actually ship.
+              Get matched with vetted founders, developers, and designers who are serious about shipping SaaS. <strong className="text-foreground font-semibold">AI-powered. No noise. No LinkedIn spam.</strong>
             </motion.p>
 
             <motion.div

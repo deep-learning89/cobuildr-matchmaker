@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import UserCards from "@/components/UserCards";
 import Navbar from "@/components/Navbar";
 import { useState } from "react";
-import { ArrowRight, Rocket, CheckCircle, Star, Users, Clock } from "lucide-react";
+import { ArrowRight, Rocket, CheckCircle, Star, Users, Clock, Target, Search, Zap } from "lucide-react";
 
 const InlineWaitlistForm = () => {
   const [email, setEmail] = useState("");
@@ -91,6 +91,58 @@ const Index = () => {
 
       {/* User Cards Section */}
       <UserCards />
+
+      {/* Simple Process Section */}
+      <section className="relative py-14 md:py-20 px-4 bg-card/30 border-y border-border">
+        <div className="container mx-auto max-w-5xl">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-2">
+              Simple Process
+            </p>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground">
+              From stranger to co-founder in 3 steps
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <Target className="h-6 w-6" />
+                </div>
+                <span className="text-xs font-bold text-primary/40">01</span>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Tell us how you build</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Share your skills, timezone, commitment level, and what you're building. The more you share, the better your matches.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <Search className="h-6 w-6" />
+                </div>
+                <span className="text-xs font-bold text-primary/40">02</span>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Get AI-matched</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Our algorithm finds people who complement your skills — not random suggestions. Developers find business minds. Designers find builders.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 hover:border-primary/30 transition-colors">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                  <Zap className="h-6 w-6" />
+                </div>
+                <span className="text-xs font-bold text-primary/40">03</span>
+              </div>
+              <h3 className="font-display font-bold text-foreground mb-2">Sprint before you commit</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Run a 24-hour collaboration sprint before committing. Test the chemistry and work style before you share equity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Cobuildr Section */}
       <section className="relative py-14 md:py-20 px-4 bg-background">
