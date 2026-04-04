@@ -1,42 +1,7 @@
 import { useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Rocket } from "lucide-react";
-
-const filters = [
-  {
-    label: "Your Role",
-    placeholder: "Select role",
-    options: ["Technical Co-founder", "Business Co-founder", "Product Lead", "Growth Hacker", "Designer", "Full-Stack Developer"],
-  },
-  {
-    label: "Looking For",
-    placeholder: "What you need",
-    options: ["Co-founder", "CTO", "CMO", "Lead Developer", "Designer", "Marketing Lead"],
-  },
-  {
-    label: "Workstyle",
-    placeholder: "How you work",
-    options: ["Remote Only", "Hybrid", "In-Person", "Async-First", "Flexible"],
-  },
-  {
-    label: "Time Zone",
-    placeholder: "Your timezone",
-    options: ["UTC-8 (PST)", "UTC-5 (EST)", "UTC+0 (GMT)", "UTC+1 (CET)", "UTC+5:30 (IST)", "UTC+8 (SGT)", "UTC+9 (JST)"],
-  },
-  {
-    label: "Commitment",
-    placeholder: "Your level",
-    options: ["Full-time", "Part-time", "Weekends Only", "Evenings", "Flexible Hours"],
-  },
-];
 
 const FilterBar = () => {
   const [email, setEmail] = useState("");
