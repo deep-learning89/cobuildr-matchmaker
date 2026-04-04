@@ -219,12 +219,8 @@ const Index = () => {
           </p>
         </div>
         <FilterBar />
-        <div className="flex justify-center mt-8">
-          <Button variant="glow" size="lg" className="text-base px-10 glow-border" onClick={() => setDialogOpen(true)}>
-            Join Waitlist
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </Button>
-        </div>
+
+
       </section>
 
       {/* User Cards Section */}
