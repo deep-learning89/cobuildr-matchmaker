@@ -157,6 +157,31 @@ export function MynaHero() {
                 visible: {
                   opacity: 1,
                   y: 0,
+                  transition: { delay: 0.7, duration: 0.4 },
+                },
+              }}
+              className="flex justify-center mb-6"
+            >
+              <Button
+                variant="glow"
+                size="lg"
+                className="text-base px-10"
+                onClick={() => {
+                  const filterSection = document.querySelector('.filter-card');
+                  filterSection?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }}
+              >
+                Join the Waitlist <ArrowRight className="h-4 w-4 ml-1" />
+              </Button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              animate={controls}
+              variants={{
+                visible: {
+                  opacity: 1,
+                  y: 0,
                   transition: { delay: 0.8, duration: 0.4 },
                 },
               }}

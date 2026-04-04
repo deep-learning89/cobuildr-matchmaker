@@ -208,17 +208,8 @@ const Index = () => {
       <Navbar />
       <MynaHero />
 
-      {/* Toolbar */}
-      <section className="relative mt-8 z-10 px-4">
-        <div className="container mx-auto max-w-2xl flex items-center justify-between rounded-2xl border border-border bg-card/80 backdrop-blur-xl shadow-lg px-6 py-4">
-          <p className="text-sm uppercase tracking-widest text-muted-foreground font-medium">
-            Ready to find your match?
-          </p>
-          <Button variant="glow" size="sm" onClick={() => setDialogOpen(true)}>
-            Get Started <ArrowRight className="h-3.5 w-3.5 ml-1" />
-          </Button>
-        </div>
-      </section>
+
+
 
       {/* Filter Section */}
       <section className="relative py-10 md:py-14 px-4 bg-background">
@@ -228,12 +219,8 @@ const Index = () => {
           </p>
         </div>
         <FilterBar />
-        <div className="flex justify-center mt-8">
-          <Button variant="glow" size="lg" className="text-base px-10 glow-border" onClick={() => setDialogOpen(true)}>
-            Join Waitlist
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </Button>
-        </div>
+
+
       </section>
 
       {/* User Cards Section */}
