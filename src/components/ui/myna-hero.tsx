@@ -92,14 +92,11 @@ export function MynaHero() {
 
   const titleWords = [
     "STOP",
-    "SOLO",
-    "GRINDING,",
-    "FIND",
-    "YOUR",
-    "CO-FOUNDER",
-    "AND",
-    "BUILD",
-    "FASTER",
+    "BUILDING",
+    "ALONE.",
+    "START",
+    "BUILDING",
+    "TOGETHER.",
   ];
 
   return (
